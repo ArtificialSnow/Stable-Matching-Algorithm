@@ -2,13 +2,14 @@ package io;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
-public class OutputParser {
+public class OutputWriter {
 
     private BufferedWriter writer;
 
-    public OutputParser(BufferedWriter writer) {
-        this.writer = writer;
+    public OutputWriter() {
+        this.writer = new BufferedWriter(new OutputStreamWriter(System.out));
     }
 
     public void writeOutput(int iteration, OutputData outputData) throws IOException {
